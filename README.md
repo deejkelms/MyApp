@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my personal F&F app for Wyncode. It is a small dating website that should use facebook api's to verify information
 
 Things you may want to cover:
 
