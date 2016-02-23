@@ -1,20 +1,21 @@
 
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
 
-<%= will_paginate %>
+<h1>What are you looking for?</h1>
+  <%= link_to "Male", users_path(:gender=>"male") %>
+  <%= link_to "Female", users_path(:gender=>"female") %>
+
 
 <ul class="users">
   <% @users.each do |user| %>
+
     <li>
       <%= gravatar_for user, size: 50 %>
       <%= link_to user.name, user %>
 			<% if current_user?(user) %>
 				| <%= link_to "delete", user, method: :delete,
-																data: { confirm: "You sure?" } %>
-			<% end %>
+																data: { confirm: "You sure you wanna do that??" } %>
+      <% end %>
     </li>
   <% end %>
 </ul>
-
-<%= will_paginate %>
